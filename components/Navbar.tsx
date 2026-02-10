@@ -10,19 +10,22 @@ function Navbar() {
 
   return (
     <nav className="relative w-full h-16 text-white bg-black flex items-center justify-between px-4">
-      <img className="w-40" src="./NordinDev-logo.png" alt="NordinDev logo" />
+      <Link href="/">
+        <img className="w-40" src="./NordinDev-logo.png" alt="NordinDev logo" />
+      </Link>
 
-      <div className={`flex gap-4 items-center justify-center ${isOpen ? "flex-col gap-8 bg-orange-400 text-xl w-[50%] items-center py-16 absolute right-0 top-0 z-20" : "hidden"} md:flex md:flex-row`}>
-        <Link href="/about">About</Link>
-        <Link href="/techstack">Tech Stack</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact</Link>
+      <div className={`flex gap-4 items-center justify-center ${isOpen ? "flex-col gap-8 bg-orange-400 text-xl w-[50%] items-center py-16 absolute right-0 top-0 z-30" : "hidden"} md:flex md:flex-row`}>
+        <Link onClick={() => setIsOpen(false)} href="/">Home</Link>
+        <Link onClick={() => setIsOpen(false)} href="/about">About</Link>
+        <Link onClick={() => setIsOpen(false)} href="/techstack">Tech Stack</Link>
+        <Link onClick={() => setIsOpen(false)} href="/projects">Projects</Link>
+        <Link onClick={() => setIsOpen(false)} href="/contact">Contact</Link>
       </div>
       {isOpen && 
-        <div className="absolute top-0 left-0 w-full h-screen z-15 bg-black/40 backdrop-blur-sm" onClick={() => setIsOpen(!isOpen)}></div> 
+        <div className="absolute top-0 left-0 w-full h-screen z-20 bg-black/40 backdrop-blur-sm" onClick={() => setIsOpen(!isOpen)}></div> 
       }
       <button className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-        { isOpen ? <img className="w-8 z-25 absolute top-4 right-4" src="./close.svg" alt="Closing navbar icon" /> : <img className={"w-8 z-25"} src="./hamburger-menu.svg" alt="Navigation menu button mobile" /> }
+        { isOpen ? <img className="w-8 z-30 absolute top-4 right-4" src="./close.svg" alt="Closing navbar icon" /> : <img className={"w-8 z-30"} src="./hamburger-menu.svg" alt="Navigation menu button mobile" /> }
       </button>
     </nav>
   );
