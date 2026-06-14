@@ -36,7 +36,7 @@ function About() {
   return (
     <div>
       <h1 className="text-3xl">About Me</h1>
-      <p>My name is Niklas, I’m {age} years old and passionate about creativity, teamwork, and continuous learning. Outside of work, I enjoy cooking, football, music, spending time with my family, and playing disc golf. Recently, I’ve discovered a strong interest in web development, and I’m excited to continue growing my skills in creating modern and user-friendly websites.</p>
+      <p>I’m Niklas, a Fullstack Developer focused on building modern and user friendly applications from database design to responsive user interfaces. My primary stack includes things like JavaScript, TypeScript, React, Next.js, SQL/NoSQL databases and Node.js. I enjoy solving real world problems and creating clean, efficient code that delivers genuine value to users. Outside of programming, I’m driven by creativity and teamwork. You’ll usually find me spending time with my family, cooking, listening to music, playing football or disc golf.</p>
 
       <section>
         <h2>Work Experience</h2>

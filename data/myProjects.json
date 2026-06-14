@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "name": "SimInvest",
+      "description": "A cryptocurrency investment simulator built with Next.js, PostgreSQL, Prisma, and Supabase. Focusing on UI design, external API integration, and database management, it features real-time prices, interactive trend charts, and mock portfolio trading.",
+      "img": "../img/Projects/SimInvest.png",
+      "url": "https://siminvest.vercel.app/"
+    },
+    {
+      "name": "Trullo",
+      "description": "A project management application that allows users to create projects, add tasks, and assign users. It follows CRUD operations and is currently a backend-only implementation with frontend in-progress. Information on testing the endpoints can be found in the README.md file.",
+      "img": "../img/Projects/trulloProject.png",
+      "url": "https://github.com/Niklas-Nordin/Trullo"
+    },
+    {
+      "name": "Adventure Excursions Inc.",
+      "description": "A Adventure excursions website built with Vue.js and Nuxt.js, together with three other students. Showcasing various outdoor activities and tours. It features a responsive design, interactive elements, and a user-friendly interface to explore different adventure options.",
+      "img": "../img/Projects/AdventureProject.png",
+      "url": "https://upplevelse-sida-vue.vercel.app/"
+    },
+    {
+      "name": "React Quiz App",
+      "description": "A quiz application built with React and useReducer, with focus on state management and component structure. It allows users to answer questions, see their score, and reset the quiz to try again.",
+      "githubRepo": "https://github.com/Niklas-Nordin/React-quiz-app",
+      "img": "../img/Projects/react-quiz.png",
+      "url": "https://react-quiz-app-gules.vercel.app/"
+    },
+    {
+      "name": "Todo List TypeScript",
+      "description": "A todo list application built with TypeScript and local storage. It allows users to add, delete, edit and mark tasks as completed.",
+      "img": "../img/Projects/ToDoList_TypeScript.png",
+      "url": "https://todo-list-typescript-weld.vercel.app/"
+    },
+    {
+      "name": "The Job Chaser",
+      "description": "A job application tracker web app focused and built with React (context & redux) and TypeScript. It allows users to sign up/sign in and search, filter and sort jobs.",
+      "img": "../img/Projects/jobChaserProject.png",
+      "url": "https://github.com/Niklas-Nordin/JobChaser"
+    }
+  ]
+}
