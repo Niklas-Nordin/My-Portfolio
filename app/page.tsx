@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 function Home() {
@@ -9,7 +8,7 @@ function Home() {
           src="/Me.jpg"
           alt="Picture of me"
           fill
-          style={{ objectFit: 'cover' }}
+          className="object-cover"
         />
         <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-black" />
       </div>
