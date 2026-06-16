@@ -64,7 +64,7 @@ return (
       </div>
     </div>
 
-    <section className="border-t pt-6 dark:border-gray-800">
+    <section className="border-t pt-6 border-gray-400">
       <h2 className="text-2xl font-semibold mb-4">Work Experience</h2>
       <ul className="flex flex-col gap-6">
         {workExperience.map((job) => (
@@ -79,7 +79,7 @@ return (
       </ul>
     </section>
 
-    <section className="border-t pt-6 dark:border-gray-800">
+    <section className="border-t pt-6 border-gray-400">
       <h2 className="text-2xl font-semibold mb-4">Education</h2>
       <ul className="flex flex-col gap-6">
         {education.map((study) => (

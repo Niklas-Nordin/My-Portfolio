@@ -9,7 +9,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative w-full h-16 text-white bg-black flex items-center justify-between px-4">
+    <nav className="relative w-full h-16 text-white bg-black flex items-center justify-between px-4 border-b-5 border-orange-500">
       <Link href="/">
         <img className="w-40" src="./NordinDev-logo.png" alt="NordinDev logo" />
       </Link>
