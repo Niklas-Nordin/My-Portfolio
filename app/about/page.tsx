@@ -64,31 +64,69 @@ return (
       </div>
     </div>
 
-    <section className="border-t pt-6 border-gray-400">
-      <h2 className="text-2xl font-semibold mb-4">Work Experience</h2>
+    <section className="border-t pt-8 border-gray-400">
+      <h2 className="text-3xl font-semibold mb-6">Work Experience</h2>
       <ul className="flex flex-col gap-6">
         {workExperience.map((job) => (
-          <li key={job.id}>
-            <h3>{job.title}</h3>
-            <p>{job.company}</p>
-            <p>{job.formOfEmployment}</p>
-            <p>{job.timeOfEmployment}</p>
-            <p>{job.location}</p>
+          <li key={job.id} className="flex flex-col gap-4 border-b-[1px] border-gray-400 pb-6">
+            <div>
+              <p className="text-orange-500">{job.timeOfEmployment}</p>
+              <h3 className="font-bold text-xl">{job.title}</h3>
+            </div>
+            <div className="flex flex-col">
+              <div className="flex gap-2">
+                <Image
+                  src="/office-building.svg"
+                  alt="Office building icon"
+                  width={25}
+                  height={25}
+                />
+                <p>{job.company}</p>
+              </div>
+              <div className="flex gap-2">
+                <Image 
+                  src="/location.svg"
+                  alt="Location icon"
+                  width={25}
+                  height={25}
+                />
+                <p>{job.location}</p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>
     </section>
 
-    <section className="border-t pt-6 border-gray-400">
-      <h2 className="text-2xl font-semibold mb-4">Education</h2>
+    <section>
+      <h2 className="text-3xl font-semibold mb-6">Education</h2>
       <ul className="flex flex-col gap-6">
         {education.map((study) => (
-          <li key={study.id}>
-            <h3>{study.title}</h3>
-            <p>{study.school}</p>
-            <p>{study.formOfStudy}</p>
-            <p>{study.timeForStudies}</p>
-            <p>{study.location}</p>
+          <li key={study.id} className="flex flex-col gap-4 border-b-[1px] border-gray-400 pb-6">
+            <div>
+              <p className="text-orange-500 font-bold">{study.timeForStudies}</p>
+              <h3 className="font-bold text-xl">{study.title}</h3>
+            </div>
+            <div className="flex flex-col">
+              <div className="flex gap-2">
+                <Image
+                  src="/office-building.svg"
+                  alt="Office building icon"
+                  width={25}
+                  height={25}
+                />
+                <p>{study.school}</p>
+              </div>
+              <div className="flex gap-2">
+                <Image 
+                  src="/location.svg"
+                  alt="Location icon"
+                  width={25}
+                  height={25}
+                />
+                <p>{study.location}</p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

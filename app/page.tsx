@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Home() {
   return (
-    <section className="w-full h-screen flex flex-col lg:flex-row items-center justify-start bg-gray-100 p-6 relative overflow-hidden">
+    <section className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-start bg-gray-100 p-6 relative overflow-hidden">
       
       <div className="block lg:hidden relative w-full h-[50%] flex justify-center items-center overflow-hidden mt-10">
         <div className="relative w-full h-full max-w-[440px] aspect-square max-h-[440px]">
