@@ -56,7 +56,7 @@ function Home() {
         >
 
           <div 
-            className="absolute h-[150vh] w-[16px] bg-gradient-to-l from-orange-500 to-gray-900 origin-center origin-center"
+            className="absolute h-[150vh] w-[16px] bg-gradient-to-l from-brand-orange to-gray-900 origin-center origin-center"
             style={{
               filter: "drop-shadow(-8px 12px 10px rgba(0, 0, 0, 0.9))"
             }}
@@ -67,13 +67,13 @@ function Home() {
 
       <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-[45%] lg:ml-[52%] px-8 gap-12 mt-8 lg:mt-0 z-10">
         <h2 className="text-5xl lg:text-6xl font-bold text-center lg:text-left">
-          I'm <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">Niklas Nordin</span>
+          I'm <span className="bg-gradient-to-r from-brand-orange to-orange-700 bg-clip-text text-transparent">Niklas Nordin</span>
         </h2>
         <h3 className="w-full text-2xl lg:text-3xl text-center lg:text-left leading-relaxed">
           Fullstack JavaScript developer focused on building{" "}
-          <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">clean, interactive</span>{" "}
+          <span className="bg-gradient-to-r from-brand-orange to-orange-700 bg-clip-text text-transparent">clean, interactive</span>{" "}
           web experiences with strong attention to{" "}
-          <span className="bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">design</span>
+          <span className="bg-gradient-to-r from-brand-orange to-orange-700 bg-clip-text text-transparent">design</span>
         </h3>
       </div>
 

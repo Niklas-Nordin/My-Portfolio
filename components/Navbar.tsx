@@ -9,12 +9,12 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative w-full h-16 text-white bg-black flex items-center justify-between px-4 border-b-5 border-orange-500">
+    <nav className="relative w-full h-16 text-white bg-black flex items-center justify-between px-4 border-b-5 border-brand-orange">
       <Link href="/">
         <img className="w-40" src="./NordinDev-logo.png" alt="NordinDev logo" />
       </Link>
 
-      <div className={`flex gap-4 items-center justify-center ${isOpen ? "flex-col gap-8 bg-orange-500 text-xl w-[50%] items-center py-16 absolute right-0 top-0 z-30" : "hidden"} md:flex md:flex-row`}>
+      <div className={`flex gap-4 items-center justify-center ${isOpen ? "flex-col gap-8 bg-brand-orange text-xl w-[50%] items-center py-16 absolute right-0 top-0 z-30" : "hidden"} md:flex md:flex-row`}>
         <Link onClick={() => setIsOpen(false)} href="/">Home</Link>
         <Link onClick={() => setIsOpen(false)} href="/about">About</Link>
         <Link onClick={() => setIsOpen(false)} href="/techstack">Tech Stack</Link>
