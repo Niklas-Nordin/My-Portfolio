@@ -18,7 +18,7 @@ function Home() {
           <div 
             className="absolute inset-0 z-10 pointer-events-none rounded-[50%] border-[1.5px] border-gray-100 scale-[1.01]" 
             style={{
-              background: "radial-gradient(circle closest-side, transparent 80%, #f3f4f6)"
+              background: "radial-gradient(circle closest-side, transparent 80%, #f6f5f3"
             }}
           />
         </div>

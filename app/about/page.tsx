@@ -7,7 +7,8 @@ import { portfolioData } from "@/data"
 function About() {
 
   const workExperience = portfolioData.jobs;
-  const education = portfolioData.studies
+  const education = portfolioData.studies;
+  const techStack = portfolioData.techStack;
 
   const calculateAge = () => {
     const birthYear = 1994;
@@ -63,6 +64,30 @@ return (
         </p>
       </div>
     </div>
+
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-bold">Tech Stack</h2>
+      <ul className="flex flex-col gap-4">
+        {techStack.map((category) => (
+          <li key={category.category} className="flex flex-col gap-2">
+            <h3 className="text-lg font-bold">{category.category}</h3>
+            <ul className="flex flex-col gap-4">
+              {category.skills.map((skill) => (
+                <li key={skill.name} className="flex gap-4 items-center">
+                  <Image
+                    src={skill.icon}
+                    alt={skill.name + " icon"}
+                    width={30}
+                    height={30}
+                  />
+                  <p>{skill.name}</p>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <section className="border-t pt-8 border-gray-400">
       <h2 className="text-3xl font-semibold mb-6">Work Experience</h2>
