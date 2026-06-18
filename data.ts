@@ -4,7 +4,7 @@ export interface Job {
   company: string;
   timeOfEmployment: string;
   location: string;
-  description?: string[];
+  description: string[];
 }
 
 export interface Study {
@@ -13,6 +13,7 @@ export interface Study {
   school: string;
   timeForStudies: string;
   location: string;
+  description: string[];
 }
 
 export interface Skill {
@@ -76,14 +77,22 @@ jobs: [
       title: "Restaurant Assistant",
       company: "Fazer Amica AB",
       timeOfEmployment: "Sep 2014 - 2016",
-      location: "Tyresö, Sweden"
+      location: "Tyresö, Sweden",
+      description: [
+        "Managed product procurement, administrative tasks, and coordinated food orders and deliveries for elder care facilities and home care services.",
+        "Assisted in kitchen operations, food preparation, and ensured high standards of hygiene and dish management.",
+        "Provided excellent customer service through cash handling, point-of-sale operations, and guest relations in the dining area."
+      ]
     },
     {
       id: 5,
       title: "Warehouse Associate",
       company: "Bageriprodukter i Sverige AB",
       timeOfEmployment: "April 2015 - 2015",
-      location: "Tumba, Sweden"
+      location: "Tumba, Sweden",
+      description: [
+        "Efficiently packed, stacked, and secured goods onto pallets using industrial wrapping to prepare orders for transit."
+      ]
     }
   ],
   studies: [
@@ -91,22 +100,35 @@ jobs: [
       id: 1,
       title: "Fullstack Javascript",
       school: "Chas Academy",
-      timeForStudies: "Sep 2024 - now",
+      timeForStudies: "Sep 2024 - June 2026",
       location: "Globen Shopping Center",
+      description: [
+        "Comprehensive fullstack program focusing on modern JavaScript/TypeScript ecosystems, covering advanced frontend frameworks, backend architecture, and database management.",
+        "Hands-on experience in agile team projects (Scrum), practicing version control (Git), CI/CD pipelines, and collaborative software development workflows.",
+        "Emphasis on building secure, scalable web applications, RESTful/GraphQL APIs, and implementing clean code practices like linting and automated testing."
+      ]
     },
     {
       id: 2,
-      title: "Fullstack Web Developer, React",
+      title: "Fullstack JavaScript & React Web Development",
       school: "Udemy",
-      timeForStudies: "Mars 2024 - now",
+      timeForStudies: "Mars 2024 - Sep 2024",
       location: "Distance",
+      description: [
+        "Successfully completed three comprehensive courses: 'The Complete Fullstack Web Developer', 'JavaScript from Zero to Expert', and a dedicated deep-dive in React.",
+        "Developed several independent fullstack applications to master core programming concepts, state management, and modern frontend architecture."
+      ]
     },
     {
       id: 3,
-      title: "CPR",
+      title: "CPR & AED",
       school: "HLR-Rådet",
       timeForStudies: "2021",
       location: "Home",
+      description: [
+        "Completed practical training certified by the Swedish Resuscitation Council (HLR-rådet).",
+        "Gained hands-on skills in Cardiopulmonary Resuscitation (CPR) and the correct use of an automated external defibrillator (AED)."
+      ]
     },
     {
       id: 4,
@@ -114,6 +136,10 @@ jobs: [
       school: "Cybergymnasiet",
       timeForStudies: "2010 - 2013",
       location: "Odenplan/Stockholm",
+      description: [
+        "Chose a technical track focused on software and digital creation, sparking my early interest in technology and web development.",
+        "Completed coursework in Web Development, Computer Programming, and 3D Modeling/Design."
+      ]
     },
   ],
   techStack: [

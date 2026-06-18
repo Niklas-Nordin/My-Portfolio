@@ -109,47 +109,49 @@ return (
     </section>
 
     <section className="pt-4">
-      <h2 className="text-3xl font-semibold mb-6">Work Experience</h2>
+      <h2 className="text-3xl font-semibold mb-12">Work Experience</h2>
       <ul className="flex flex-col gap-6">
         {workExperience.map((job) => (
-          <li key={job.id} className="flex flex-col gap-4 border-b-[1px] border-gray-300 pb-6">
+          <li key={job.id} className="grid grid-cols-1 md:grid-cols-[176px_1fr] gap-2 md:gap-8 border-b-[1px] border-gray-300 pb-6">
             <div>
-              <p className="text-orange-500 font-bold text-lg">{job.timeOfEmployment}</p>
-              <h3 className="font-bold text-xl">{job.title}</h3>
+              <h3 className="text-orange-500 font-bold text-lg">{job.timeOfEmployment}</h3>
             </div>
-            {job.description && (
-              <ul>
-                {job.description.map((bullet, index) => (
-                  <li key={index} className="leading-relaxed flex items-baseline gap-4">
-                    <Image 
-                    src="/arrow-right.svg"
-                    alt="Arrow right"
-                    width={10}
-                    height={10}
-                    />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/building.svg"
-                  alt="Office building icon"
-                  width={15}
-                  height={15}
-                />
-                <p>{job.company}</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Image 
-                  src="/location_point.svg"
-                  alt="Location icon"
-                  width={15}
-                  height={15}
-                />
-                <p>{job.location}</p>
+            <div className="flex flex-col gap-4 md:gap-6">
+              <h3 className="font-bold text-xl">{job.title}</h3>
+              {job.description && (
+                <ul>
+                  {job.description.map((bullet, index) => (
+                    <li key={index} className="leading-relaxed flex items-baseline gap-4">
+                      <Image 
+                      src="/arrow-right.svg"
+                      alt="Arrow right"
+                      width={10}
+                      height={10}
+                      />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-2">
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/building.svg"
+                    alt="Office building icon"
+                    width={15}
+                    height={15}
+                  />
+                  <p>{job.company}</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Image 
+                    src="/location_point.svg"
+                    alt="Location icon"
+                    width={15}
+                    height={15}
+                  />
+                  <p>{job.location}</p>
+                </div>
               </div>
             </div>
           </li>
@@ -158,32 +160,49 @@ return (
     </section>
 
     <section>
-      <h2 className="text-3xl font-semibold mb-6">Education</h2>
+      <h2 className="text-3xl font-semibold mb-12 mt-2">Education</h2>
       <ul className="flex flex-col gap-6">
         {education.map((study) => (
-          <li key={study.id} className="flex flex-col gap-4 border-b-[1px] border-gray-400 pb-6">
+          <li key={study.id} className="grid grid-cols-1 md:grid-cols-[176px_1fr] gap-2 md:gap-8 border-b-[1px] border-gray-300 pb-6">
             <div>
-              <p className="text-orange-500 font-bold text-lg">{study.timeForStudies}</p>
-              <h3 className="font-bold text-xl">{study.title}</h3>
+              <h3 className="text-orange-500 font-bold text-lg">{study.timeForStudies}</h3>
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/building.svg"
-                  alt="Office building icon"
-                  width={15}
-                  height={15}
-                />
-                <p>{study.school}</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Image 
-                  src="/location_point.svg"
-                  alt="Location icon"
-                  width={15}
-                  height={15}
-                />
-                <p>{study.location}</p>
+            <div className="flex flex-col gap-4 md:gap-6">
+              <h3 className="font-bold text-xl">{study.title}</h3>
+              {study.description && (
+                <ul>
+                  {study.description.map((bullet, index) => (
+                    <li key={index} className="leading-relaxed flex items-baseline gap-4">
+                      <Image 
+                      src="/arrow-right.svg"
+                      alt="Arrow right"
+                      width={10}
+                      height={10}
+                      />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-2">
+                <div className="flex items-center gap-2 w-[140px]">
+                  <Image
+                    src="/building.svg"
+                    alt="Office building icon"
+                    width={15}
+                    height={15}
+                  />
+                  <p>{study.school}</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Image 
+                    src="/location_point.svg"
+                    alt="Location icon"
+                    width={15}
+                    height={15}
+                  />
+                  <p>{study.location}</p>
+                </div>
               </div>
             </div>
           </li>
