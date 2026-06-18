@@ -4,6 +4,7 @@ export interface Job {
   company: string;
   timeOfEmployment: string;
   location: string;
+  description?: string[];
 }
 
 export interface Study {
@@ -31,35 +32,59 @@ export interface PortfolioData {
 }
 
 export const portfolioData: PortfolioData = {
-  jobs: [
+jobs: [
     {
       id: 1,
-      title: "Web Developer (Internship)",
+      title: "Software Developer Intern",
       company: "Hilja",
-      timeOfEmployment: "Feb 2026 - Now",
-      location: "Gustavsberg",
+      timeOfEmployment: "Feb 2026 - May 2026",
+      location: "Värmdö, Sweden",
+      description: [
+        "Developed functionality in a B2B system using Outsystems, with a focus on usability and performance.",
+        "Built an address management system with full CRUD functionality for handling contact data.",
+        "Implemented search functionality to improve data accessibility.",
+        "Developed a hierarchical file and document structure with support for nested folders.",
+        "Implemented drag-and-drop functionality using JavaScript to improve user interaction.",
+        "Worked with performance optimisation to minimise server load and create responsive user interfaces."
+      ]
     },
     {
       id: 2,
-      title: "Driver / Warehouse Worker",
-      company: "Mathem I Sverige AB",
-      timeOfEmployment: "Nov 2016 - Now",
-      location: "Larsboda",
+      title: "Web Developer Intern",
+      company: "Webbab",
+      timeOfEmployment: "Dec 2025 - Feb 2026",
+      location: "Remote, Sweden",
+      description: [
+        "Designed UI/UX in Figma, focusing on a checkout flow for an e-commerce solution."
+      ]
     },
     {
       id: 3,
-      title: "Restaurant Assistant",
-      company: "Fazer Amica AB",
-      timeOfEmployment: "Sep 2014 - 2016",
-      location: "Tyresö",
+      title: "Delivery & Warehouse Associate / Team Support",
+      company: "Mathem I Sverige AB",
+      timeOfEmployment: "Nov 2016 - Present (On Leave)",
+      location: "Stockholm, Sweden",
+      description: [
+        "Responsible for deliveries with high standards of quality and punctuality.",
+        "Supported recruitment, onboarding and training of new employees.",
+        "Experience as a Health and Safety Representative at the Stockholm site, contributing to workplace improvements.",
+        "Worked with warehouse logistics, including order picking with high efficiency."
+      ]
     },
     {
       id: 4,
-      title: "Warehouse Worker",
-      company: "Bageriprodukter AB",
-      timeOfEmployment: "April 2015 - 2015",
-      location: "Tumba",
+      title: "Restaurant Assistant",
+      company: "Fazer Amica AB",
+      timeOfEmployment: "Sep 2014 - 2016",
+      location: "Tyresö, Sweden"
     },
+    {
+      id: 5,
+      title: "Warehouse Associate",
+      company: "Bageriprodukter i Sverige AB",
+      timeOfEmployment: "April 2015 - 2015",
+      location: "Tumba, Sweden"
+    }
   ],
   studies: [
     {

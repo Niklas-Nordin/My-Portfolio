@@ -66,21 +66,40 @@ return (
     </div>
 
     <section className="flex flex-col gap-6">
-      <h2 className="text-2xl font-bold">Tech Stack</h2>
-      <ul className="flex flex-col gap-4">
+      <h2 className="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral-100">
+        Tech Stack
+      </h2>
+      
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {techStack.map((category) => (
-          <li key={category.category} className="flex flex-col gap-2">
-            <h3 className="text-lg font-bold">{category.category}</h3>
-            <ul className="flex flex-col gap-4">
+          <li 
+            key={category.category} 
+            className="flex flex-col gap-4 p-6 bg-[#fcfbf9] dark:bg-neutral-900/50 border border-gray-200 shadow-sm dark:border-neutral-800/60 rounded-2xl"
+          >
+            <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 border-b border-gray-300 dark:border-neutral-800 pb-2">
+              {category.category}
+            </h3>
+            
+            <ul className="flex flex-wrap gap-2.5">
               {category.skills.map((skill) => (
-                <li key={skill.name} className="flex gap-4 items-center">
-                  <Image
-                    src={skill.icon}
-                    alt={skill.name + " icon"}
-                    width={30}
-                    height={30}
-                  />
-                  <p>{skill.name}</p>
+                <li 
+                  key={skill.name} 
+                  className="flex items-center gap-2.5 px-3 py-2 bg-white dark:bg-neutral-900 border border-gray-300 shadow dark:border-neutral-800 rounded-xl text-sm font-medium text-neutral-600 dark:text-neutral-300 transition-all hover:border-brand-orange dark:hover:border-brand-orange hover:text-brand-orange dark:hover:text-brand-orange cursor-default group"
+                >
+                  {skill.icon ? (
+                    <div className="relative w-5 h-5 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+                      <Image
+                        src={skill.icon}
+                        alt={`${skill.name} icon`}
+                        width={20}
+                        height={20}
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 dark:bg-neutral-600 transition-colors group-hover:bg-brand-orange" />
+                  )}
+                  <span>{skill.name}</span>
                 </li>
               ))}
             </ul>
@@ -89,31 +108,46 @@ return (
       </ul>
     </section>
 
-    <section className="border-t pt-8 border-gray-400">
+    <section className="pt-4">
       <h2 className="text-3xl font-semibold mb-6">Work Experience</h2>
       <ul className="flex flex-col gap-6">
         {workExperience.map((job) => (
-          <li key={job.id} className="flex flex-col gap-4 border-b-[1px] border-gray-400 pb-6">
+          <li key={job.id} className="flex flex-col gap-4 border-b-[1px] border-gray-300 pb-6">
             <div>
               <p className="text-orange-500 font-bold text-lg">{job.timeOfEmployment}</p>
               <h3 className="font-bold text-xl">{job.title}</h3>
             </div>
+            {job.description && (
+              <ul>
+                {job.description.map((bullet, index) => (
+                  <li key={index} className="leading-relaxed flex items-baseline gap-4">
+                    <Image 
+                    src="/arrow-right.svg"
+                    alt="Arrow right"
+                    width={10}
+                    height={10}
+                    />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             <div className="flex flex-col">
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <Image
-                  src="/office-building.svg"
+                  src="/building.svg"
                   alt="Office building icon"
-                  width={25}
-                  height={25}
+                  width={15}
+                  height={15}
                 />
                 <p>{job.company}</p>
               </div>
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <Image 
-                  src="/location.svg"
+                  src="/location_point.svg"
                   alt="Location icon"
-                  width={25}
-                  height={25}
+                  width={15}
+                  height={15}
                 />
                 <p>{job.location}</p>
               </div>
@@ -133,21 +167,21 @@ return (
               <h3 className="font-bold text-xl">{study.title}</h3>
             </div>
             <div className="flex flex-col">
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <Image
-                  src="/office-building.svg"
+                  src="/building.svg"
                   alt="Office building icon"
-                  width={25}
-                  height={25}
+                  width={15}
+                  height={15}
                 />
                 <p>{study.school}</p>
               </div>
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <Image 
-                  src="/location.svg"
+                  src="/location_point.svg"
                   alt="Location icon"
-                  width={25}
-                  height={25}
+                  width={15}
+                  height={15}
                 />
                 <p>{study.location}</p>
               </div>
