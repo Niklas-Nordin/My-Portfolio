@@ -192,20 +192,25 @@ jobs: [
       ]
     },
     {
-      category: "DevOps & Verktyg",
+      category: "DevOps & Hosting",
       skills: [
         { name: "GitHub (Actions / Projects)", icon: "/techStack/github-icon.svg" },
         { name: "GitLab (Issue boards)", icon: "/techStack/gitlab-icon.svg" },
         { name: "Git", icon: "/techStack/git-icon.svg" },
         { name: "CI/CD", icon: "/techStack/CI_CD_icon.png" },
         { name: "Docker", icon: "/techStack/Docker-logo.svg" },
-        { name: "ESLint", icon: "/techStack/ESLint-logo.svg" },
-        { name: "Jest", icon: "/techStack/Jest-logo.svg" },
-        { name: "Figma", icon: "/techStack/Figma-logo.svg" },
-        { name: "Google Analytics", icon: "/techStack/Logo_Google_Analytics.svg" },
-        { name: "Visual Studio Code", icon: "/techStack/vs-code-icon.svg" },
         { name: "Vercel", icon: "/techStack/vercel.svg" },
         { name: "Netlify", icon: "/techStack/Netlify-Logo.png" }
+      ]
+    },
+    {
+      category: "Testing, Tools & Design",
+      skills: [
+        { name: "Jest", icon: "/techStack/Jest-logo.svg" },
+        { name: "ESLint", icon: "/techStack/ESLint-logo.svg" },
+        { name: "Figma", icon: "/techStack/Figma-logo.svg" },
+        { name: "Google Analytics", icon: "/techStack/Logo_Google_Analytics.svg" },
+        { name: "Visual Studio Code", icon: "/techStack/vs-code-icon.svg" }
       ]
     }
   ]
