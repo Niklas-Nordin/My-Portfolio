@@ -32,7 +32,7 @@ export interface topProjects {
   liveUrl?: string;
   githubUrl?: string;
   imagePath: string;
-  technologies: string[];
+  skills: Skill[];
   description: string[];
 }
 
@@ -225,23 +225,22 @@ jobs: [
       ]
     }
   ],
-  topProjects: [
+topProjects: [
     {
       id: "siminvest",
       title: "SimInvest",
       liveUrl: "https://siminvest-rouge.vercel.app/",
       imagePath: "/projects/SimInvest.png",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "React",
-        "Supabase",
-        "PostgreSQL",
-        "Prisma ORM",
-        "Recharts",
-        "Zod",
-        "JWT",
-        "bcrypt"
+      skills: [
+        { name: "Next.js", icon: "/techStack/nextjs-icon.svg" },
+        { name: "TypeScript", icon: "/techStack/Typescript_logo.svg" },
+        { name: "Supabase", icon: "/techStack/supabase.png" },
+        { name: "PostgreSQL", icon: "/techStack/Postgresql_elephant.svg" },
+        { name: "Prisma", icon: "/techStack/prisma-svgrepo-com.svg" },
+        { name: "Recharts", icon: "/techStack/recharts.png" },
+        { name: "Zod", icon: "/techStack/zod.png" },
+        { name: "JWT", icon: "/techStack/jwt.png" },
+        { name: "bcrypt", icon: "/techStack/bcrypt.jpg" }
       ],
       description: [
         "Fullstack developer role with total ownership of the entire frontend, UI/UX design, and backend authentication.",
@@ -254,15 +253,15 @@ jobs: [
       id: "trullo",
       title: "Trullo",
       githubUrl: "https://github.com/Niklas-Nordin/Trullo",
-      imagePath: "/projects/Trullo.png", // Kom ihåg att lägga till en screenshot i din public-mapp sen!
-      technologies: [
-        "Node.js",
-        "Express.js",
-        "TypeScript",
-        "JavaScript",
-        "MongoDB",
-        "Mongoose",
-        "JWT"
+      imagePath: "/projects/Trullo.png",
+      skills: [
+        { name: "Node.js", icon: "/techStack/nodejs-icon.svg" },
+        { name: "Express.js", icon: "/techStack/Express.svg" },
+        { name: "TypeScript", icon: "/techStack/Typescript_logo.svg" },
+        { name: "JavaScript", icon: "/techStack/javascript-icon.svg" },
+        { name: "MongoDB", icon: "/techStack/MongoDB_Logo.svg" },
+        { name: "Mongoose", icon: "/techStack/mongoose.png" }, // Återanvänder MongoDB-ikon för Mongoose
+        { name: "JWT", icon: "/techStack/jwt.png" }
       ],
       description: [
         "A backend-focused Trello clone built entirely from scratch to master API design and NoSQL database modeling.",
