@@ -26,10 +26,21 @@ export interface TechStack {
   skills: Skill[];
 }
 
+export interface topProjects {
+  id: string;
+  title: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  imagePath: string;
+  technologies: string[];
+  description: string[];
+}
+
 export interface PortfolioData {
   jobs: Job[];
   studies: Study[];
   techStack: TechStack[];
+  topProjects: topProjects[];
 }
 
 export const portfolioData: PortfolioData = {
@@ -211,6 +222,53 @@ jobs: [
         { name: "Figma", icon: "/techStack/Figma-logo.svg" },
         { name: "Google Analytics", icon: "/techStack/Logo_Google_Analytics.svg" },
         { name: "Visual Studio Code", icon: "/techStack/vs-code-icon.svg" }
+      ]
+    }
+  ],
+  topProjects: [
+    {
+      id: "siminvest",
+      title: "SimInvest",
+      liveUrl: "https://siminvest-rouge.vercel.app/",
+      imagePath: "/projects/SimInvest.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Supabase",
+        "PostgreSQL",
+        "Prisma ORM",
+        "Recharts",
+        "Zod",
+        "JWT",
+        "bcrypt"
+      ],
+      description: [
+        "Fullstack developer role with total ownership of the entire frontend, UI/UX design, and backend authentication.",
+        "Solely designed and developed the entire user interface and responsive layouts, building dynamic dashboards, portfolio tables, and interactive price graphs utilizing Recharts.",
+        "Architected and implemented a secure authentication system from scratch, managing registration, login, and secure sessions via JWT (HttpOnly cookies) and bcrypt.",
+        "Developed structured backend endpoints to handle authentication requests and served formatted database data directly to the frontend components."
+      ]
+    },
+    {
+      id: "trullo",
+      title: "Trullo",
+      githubUrl: "https://github.com/Niklas-Nordin/Trullo",
+      imagePath: "/projects/Trullo.png", // Kom ihåg att lägga till en screenshot i din public-mapp sen!
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "JavaScript",
+        "MongoDB",
+        "Mongoose",
+        "JWT"
+      ],
+      description: [
+        "A backend-focused Trello clone built entirely from scratch to master API design and NoSQL database modeling.",
+        "Architected and developed a robust REST API with comprehensive CRUD functionality for workspaces, boards, lists, and tasks.",
+        "Modeled a non-relational database structure using MongoDB and Mongoose, implementing strict schema validation and data integrity rules.",
+        "Implemented secure user authentication and session handling from scratch using JWT and password hashing."
       ]
     }
   ]
