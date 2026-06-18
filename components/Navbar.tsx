@@ -17,7 +17,6 @@ function Navbar() {
       <div className={`flex gap-4 items-center justify-center ${isOpen ? "flex-col gap-8 bg-brand-orange text-xl w-[50%] items-center py-16 absolute right-0 top-0 z-30" : "hidden"} md:flex md:flex-row`}>
         <Link onClick={() => setIsOpen(false)} href="/">Home</Link>
         <Link onClick={() => setIsOpen(false)} href="/about">About</Link>
-        <Link onClick={() => setIsOpen(false)} href="/techstack">Tech Stack</Link>
         <Link onClick={() => setIsOpen(false)} href="/projects">Projects</Link>
         <Link onClick={() => setIsOpen(false)} href="/contact">Contact</Link>
       </div>
