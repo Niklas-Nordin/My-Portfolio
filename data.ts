@@ -36,11 +36,19 @@ export interface topProjects {
   description: string[];
 }
 
+export interface otherProjects {
+  id: string;
+  title: string;
+  imagePath: string;
+  description: string[];
+}
+
 export interface PortfolioData {
   jobs: Job[];
   studies: Study[];
   techStack: TechStack[];
   topProjects: topProjects[];
+  otherProjects: otherProjects[];
 }
 
 export const portfolioData: PortfolioData = {
@@ -225,7 +233,7 @@ jobs: [
       ]
     }
   ],
-topProjects: [
+  topProjects: [
     {
       id: "siminvest",
       title: "SimInvest",
@@ -261,13 +269,46 @@ topProjects: [
         { name: "JavaScript", icon: "/techStack/javascript-icon.svg" },
         { name: "MongoDB", icon: "/techStack/MongoDB_Logo.svg" },
         { name: "Mongoose", icon: "/techStack/mongoose.png" }, // Återanvänder MongoDB-ikon för Mongoose
-        { name: "JWT", icon: "/techStack/jwt.png" }
+        { name: "JWT", icon: "/techStack/jwt.png" },
+        { name: "bcrypt", icon: "/techStack/bcrypt.jpg" }
       ],
       description: [
         "A backend-focused Trello clone built entirely from scratch to master API design and NoSQL database modeling.",
         "Architected and developed a robust REST API with comprehensive CRUD functionality for workspaces, boards, lists, and tasks.",
         "Modeled a non-relational database structure using MongoDB and Mongoose, implementing strict schema validation and data integrity rules.",
         "Implemented secure user authentication and session handling from scratch using JWT and password hashing."
+      ]
+    }
+  ],
+  otherProjects: [
+    {
+      id: "adventure-excursions",
+      title: "Adventure Excursions",
+      imagePath: "/projects/image55.png",
+      description: [
+        "Collaborated with three other students to build a dynamic web application showcasing various outdoor activities and tours.",
+        "Developed the frontend utilizing Vue.js and Nuxt.js to ensure a modern, structured, and scalable architecture.",
+        "Designed and implemented a fully responsive user interface featuring interactive elements for exploring adventure options."
+      ]
+    },
+    {
+      id: "react-quiz",
+      title: "React Quiz",
+      imagePath: "/projects/react-quiz.png",
+      description: [
+        "Built an interactive quiz application driven by a 15-question React API to master complex data fetching and asynchronous state handling.",
+        "Focused heavily on advanced state management by utilizing useReducer to cleanly centralize logic for quiz status, timers, answers, and scoring.",
+        "Designed and developed a strict mobile-first user interface, optimized specifically for a seamless and intuitive quiz experience on mobile screens."
+      ]
+    },
+    {
+      id: "todo-list",
+      title: "Todo List",
+      imagePath: "/projects/ToDoList.png",
+      description: [
+        "Developed a lightweight and efficient task management application built entirely with TypeScript.",
+        "Implemented seamless data persistence by utilizing Local Storage to save and retrieve tasks across sessions.",
+        "Created comprehensive CRUD functionality allowing users to add, delete, edit, and mark tasks as completed."
       ]
     }
   ]

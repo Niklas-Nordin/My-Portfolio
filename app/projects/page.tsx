@@ -4,6 +4,7 @@ import { portfolioData } from "@/data";
 function Projects() {
 
   const topProjects = portfolioData.topProjects;
+  const otherProjects = portfolioData.otherProjects;
 
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-12 w-full p-2">
@@ -15,7 +16,6 @@ function Projects() {
             key={project.id} 
             className="flex flex-col gap-6 w-full border-b border-gray-300 pb-12"
           >
-            {/* Övre sektion: Bild och text i två kolumner på lg-skärmar */}
             <div className={`flex flex-col lg:flex-row gap-6 md:gap-10 items-center lg:items-start w-full ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
               <div className="w-full max-w-[600px] flex justify-center md:justify-start">
                 <Image
@@ -50,7 +50,6 @@ function Projects() {
               </div>
             </div>
 
-            {/* Nedre sektion: Tags som ligger under både bild och text */}
             <div className="mx-auto w-full max-w-[600px] lg:max-w-7xl">
               <ul className="flex flex-wrap gap-2.5">
                 {project.skills.map((skill) => (
@@ -79,6 +78,53 @@ function Projects() {
           </li>
         ))}
       </ul>
+
+      <div className="pb-10">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center lg:text-left">
+          Other Projects
+        </h2>
+
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 w-full">
+          {otherProjects.map((project) => (
+            <li 
+              key={project.id} 
+              className="flex flex-col gap-4 w-full"
+            >
+              <div className="w-full flex justify-center">
+                <Image
+                  src={project.imagePath}
+                  alt={`Image of ${project.title} project.`}
+                  width={600}
+                  height={400}
+                  className="rounded-lg border border-gray-400 w-full h-auto object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  {project.title}
+                </h3>
+                
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2 text-sm flex flex-col">
+                  {project.description.map((point, index) => (
+                    <li key={index} className="flex gap-3 items-baseline">
+                      <Image 
+                        src="/arrow-right.svg"
+                        alt="Arrow right"
+                        width={8}
+                        height={8}
+                        className="shrink-0"
+                      />
+                      <p>{point}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
