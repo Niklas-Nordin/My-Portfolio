@@ -10,41 +10,48 @@ function Projects() {
       <h1 className="bg-gradient-to-r from-brand-orange to-orange-700 bg-clip-text text-transparent text-5xl lg:text-6xl font-bold text-center lg:text-left">My projects</h1>
 
       <ul className="flex flex-col gap-12 md:gap-16">
-        {topProjects.map((project) => (
+        {topProjects.map((project, index) => (
           <li 
             key={project.id} 
-            className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-start w-full"
+            className="flex flex-col gap-6 w-full border-b border-gray-300 pb-12"
           >
-            <div className="w-full max-w-[600px] flex justify-center md:justify-start">
-              <Image
-                src={project.imagePath}
-                alt={`Image of ${project.title} project.`}
-                width={600}
-                height={400}
-                className="rounded-lg border border-gray-400 w-full h-auto object-cover"
-                sizes="(max-width: 768px) 100vw, 600px"
-                priority={project.id === "siminvest"}
-              />
+            {/* Övre sektion: Bild och text i två kolumner på lg-skärmar */}
+            <div className={`flex flex-col lg:flex-row gap-6 md:gap-10 items-center lg:items-start w-full ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+              <div className="w-full max-w-[600px] flex justify-center md:justify-start">
+                <Image
+                  src={project.imagePath}
+                  alt={`Image of ${project.title} project.`}
+                  width={600}
+                  height={400}
+                  className="rounded-lg border border-gray-400 w-full h-auto object-cover"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  priority={project.id === "siminvest"}
+                />
+              </div>
+
+              <div className="w-full max-w-[600px] flex flex-col gap-4 text-start md:text-left">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {project.title}
+                </h2>
+                
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2 text-sm md:text-base flex flex-col gap-2">
+                  {project.description.map((point, index) => (
+                    <li key={index} className="flex gap-4 items-baseline">
+                      <Image 
+                      src="/arrow-right.svg"
+                      alt="Arrow right"
+                      width={10}
+                      height={10}
+                      />
+                      <p>{point}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div className="w-full max-w-[600px] flex flex-col gap-4 text-start md:text-left">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                {project.title}
-              </h2>
-              
-              <ul className="text-gray-600 dark:text-gray-300 space-y-2 text-sm md:text-base flex flex-col gap-2">
-                {project.description.map((point, index) => (
-                  <li className="flex gap-4 items-baseline">
-                    <Image 
-                    src="/arrow-right.svg"
-                    alt="Arrow right"
-                    width={10}
-                    height={10}
-                    />
-                    <p key={index}>{point}</p>
-                  </li>
-                ))}
-              </ul>
+            {/* Nedre sektion: Tags som ligger under både bild och text */}
+            <div className="mx-auto w-full max-w-[600px] lg:max-w-7xl">
               <ul className="flex flex-wrap gap-2.5">
                 {project.skills.map((skill) => (
                   <li 
