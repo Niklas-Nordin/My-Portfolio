@@ -284,7 +284,7 @@ jobs: [
     {
       id: "adventure-excursions",
       title: "Adventure Excursions",
-      imagePath: "/projects/image55.png",
+      imagePath: "/projects/AdventureProject.png",
       description: [
         "Collaborated with three other students to build a dynamic web application showcasing various outdoor activities and tours.",
         "Developed the frontend utilizing Vue.js and Nuxt.js to ensure a modern, structured, and scalable architecture.",

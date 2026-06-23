@@ -76,7 +76,7 @@ function Contact() {
               <span>Stockholm, Sweden</span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm md:text-base">
+            <div className="flex flex-wrap items-center gap-4 text-sm md:text-base">
               <Image
               src="/mail-icon.svg"
               alt="Mail envelope icon"
@@ -141,7 +141,6 @@ function Contact() {
         <div className="w-full max-w-[500px] mx-auto lg:mx-0 min-h-[380px]">
           {isSuccess ? (
             <div className="w-full p-8 bg-neutral-50 dark:bg-neutral-900/40 rounded-2xl border border-gray-200 dark:border-neutral-800 text-center space-y-4">
-              <span className="text-4xl block">🎉</span>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                 Message sent successfully!
               </h3>
