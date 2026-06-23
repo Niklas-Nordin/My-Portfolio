@@ -47,14 +47,14 @@ function Contact() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 space-y-12 w-full">
+    <div className="max-w-7xl mx-auto p-6 space-y-12 w-full lg:pt-16 py-10">
       <h1 className="bg-gradient-to-r from-brand-orange to-orange-700 bg-clip-text text-transparent text-5xl lg:text-6xl font-bold text-center lg:text-left">
         Contact me
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start w-full">
         
-        <div className="space-y-8 max-w-[600px] w-full mx-auto lg:mx-0">
+        <div className="space-y-8 max-w-[500px] w-full mx-auto lg:mx-0">
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Let's build something together!
@@ -67,12 +67,22 @@ function Contact() {
 
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <div className="flex items-center gap-4 text-sm md:text-base">
-              <span className="text-xl">📍</span>
+              <Image
+              src="/location_point.svg"
+              alt="Location point icon"
+              width={20}
+              height={20}
+              />
               <span>Stockholm, Sweden</span>
             </div>
 
             <div className="flex flex-wrap items-center gap-3 text-sm md:text-base">
-              <span className="text-xl">✉️</span>
+              <Image
+              src="/mail-icon.svg"
+              alt="Mail envelope icon"
+              width={20}
+              height={20}
+              />
               <a 
                 href={`mailto:${emailAddress}`} 
                 className="hover:text-brand-orange transition-colors font-medium"
@@ -88,7 +98,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-gray-300 dark:border-neutral-800">
+          <div className="pt-4 border-t border-gray-200 dark:border-neutral-800">
             <p className="text-sm font-semibold dark:text-neutral-500 uppercase tracking-wider mb-4">
               Connect with me
             </p>
@@ -128,7 +138,7 @@ function Contact() {
           </div>
         </div>
 
-        <div className="w-full max-w-[600px] mx-auto lg:mx-0 min-h-[380px]">
+        <div className="w-full max-w-[500px] mx-auto lg:mx-0 min-h-[380px]">
           {isSuccess ? (
             <div className="w-full p-8 bg-neutral-50 dark:bg-neutral-900/40 rounded-2xl border border-gray-200 dark:border-neutral-800 text-center space-y-4">
               <span className="text-4xl block">🎉</span>
