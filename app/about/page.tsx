@@ -59,7 +59,7 @@ return (
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Niklas Nordin</h1>
           <h2 className="text-2xl text-brand-orange italic">Fullstack Developer</h2>
         </div>
-        <p className="leading-relaxed text-gray-650 dark:text-gray-300">
+        <p className="leading-relaxed dark:text-gray-300">
           I’m Niklas, a {age} years old Fullstack Developer focused on building modern and user friendly applications from database design to responsive user interfaces. My primary stack includes things like JavaScript, TypeScript, React, Next.js, SQL/NoSQL databases and Node.js. I enjoy solving real world problems and creating clean, efficient code that delivers genuine value to users. Outside of programming, I’m driven by creativity and teamwork. You’ll usually find me spending time with my family, cooking, listening to music, playing football or disc golf.
         </p>
       </div>

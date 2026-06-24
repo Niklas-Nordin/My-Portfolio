@@ -34,7 +34,7 @@ function Projects() {
                   {project.title}
                 </h2>
                 
-                <ul className="text-gray-600 dark:text-gray-300 space-y-2 text-sm md:text-base flex flex-col gap-2">
+                <ul className="dark:text-gray-300 space-y-2 text-sm md:text-base flex flex-col gap-2">
                   {project.description.map((point, index) => (
                     <li key={index} className="flex gap-4 items-baseline">
                       <Image 
@@ -106,7 +106,7 @@ function Projects() {
                   {project.title}
                 </h3>
                 
-                <ul className="text-gray-600 dark:text-gray-300 space-y-2 text-sm flex flex-col">
+                <ul className="dark:text-gray-300 space-y-2 text-sm flex flex-col">
                   {project.description.map((point, index) => (
                     <li key={index} className="flex gap-3 items-baseline">
                       <Image 
