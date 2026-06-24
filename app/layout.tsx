@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Geist } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 
-const PlayFairDisplay = Geist({
+const barlow = Oswald({
   subsets: ["latin"],
-  display: "swap",
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${PlayFairDisplay.className}  antialiased flex flex-col min-h-screen`}
+        className={`${barlow.className}  antialiased flex flex-col min-h-screen`}
       >
         <Navbar />
         <main className="flex-grow flex flex-col bg-gray-100">

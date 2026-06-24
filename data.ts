@@ -267,7 +267,7 @@ jobs: [
         { name: "Express.js", icon: "/techStack/Express.svg" },
         { name: "TypeScript", icon: "/techStack/Typescript_logo.svg" },
         { name: "JavaScript", icon: "/techStack/javascript-icon.svg" },
-        { name: "MongoDB", icon: "/techStack/MongoDB_Logo.svg" },
+        { name: "MongoDB", icon: "/techStack/mongodb-icon.svg" },
         { name: "Mongoose", icon: "/techStack/mongoose.png" }, // Återanvänder MongoDB-ikon för Mongoose
         { name: "JWT", icon: "/techStack/jwt.png" },
         { name: "bcrypt", icon: "/techStack/bcrypt.jpg" }
