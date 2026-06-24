@@ -198,7 +198,7 @@ jobs: [
       skills: [
         { name: "MySQL", icon: "/techStack/mysql-logo-svgrepo-com.svg" },
         { name: "PostgreSQL", icon: "/techStack/Postgresql_elephant.svg" },
-        { name: "MongoDB", icon: "/techStack/MongoDB_logo.svg" },
+        { name: "MongoDB", icon: "/techStack/mongodb-icon.svg" },
         { name: "Prisma", icon: "/techStack/prisma-svgrepo-com.svg" },
         { name: "Supabase", icon: "/techStack/supabase.png" }
       ]
