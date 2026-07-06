@@ -31,7 +31,7 @@ export interface topProjects {
   title: string;
   liveUrl?: string;
   githubUrl?: string;
-  imagePath: string;
+  imagePaths: string[];
   skills: Skill[];
   description: string[];
 }
@@ -238,7 +238,7 @@ jobs: [
       id: "siminvest",
       title: "SimInvest",
       liveUrl: "https://siminvest-rouge.vercel.app/",
-      imagePath: "/projects/SimInvest.png",
+      imagePaths: ["/projects/SimInvestLandingPage.png", "/projects/SimInvestAboutUs.png", "/projects/SimInvestPortfolio.png", "/projects/SimInvestMarket.png", "/projects/SimInvestBuy.png"],
       skills: [
         { name: "Next.js", icon: "/techStack/nextjs-icon.svg" },
         { name: "TypeScript", icon: "/techStack/Typescript_logo.svg" },
@@ -261,7 +261,7 @@ jobs: [
       id: "trullo",
       title: "Trullo",
       githubUrl: "https://github.com/Niklas-Nordin/Trullo",
-      imagePath: "/projects/Trullo.png",
+      imagePaths: ["/projects/Trullo.png"],
       skills: [
         { name: "Node.js", icon: "/techStack/nodejs-icon.svg" },
         { name: "Express.js", icon: "/techStack/Express.svg" },

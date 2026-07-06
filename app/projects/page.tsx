@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { portfolioData } from "@/data";
+import ImageCarousel from "@/components/ImageCarousel";
 
 function Projects() {
 
@@ -17,17 +18,11 @@ function Projects() {
             className="flex flex-col gap-6 w-full border-b border-gray-300 pb-12"
           >
             <div className={`flex flex-col lg:flex-row gap-6 md:gap-10 items-center lg:items-start w-full ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
-              <div className="w-full max-w-[600px] flex justify-center md:justify-start">
-                <Image
-                  src={project.imagePath}
-                  alt={`Image of ${project.title} project.`}
-                  width={600}
-                  height={400}
-                  className="rounded-lg border border-gray-400 w-full h-auto object-cover"
-                  sizes="(max-width: 768px) 100vw, 600px"
-                  priority={project.id === "siminvest"}
-                />
-              </div>
+              <ImageCarousel
+                imagePaths={project.imagePaths}
+                title={project.title}
+                priority={index === 0} // Prioritize the first project for faster loading
+              />
 
               <div className="w-full max-w-[600px] flex flex-col gap-4 text-start md:text-left">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
