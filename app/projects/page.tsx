@@ -21,7 +21,9 @@ function Projects() {
               <ImageCarousel
                 imagePaths={project.imagePaths}
                 title={project.title}
-                priority={index === 0} // Prioritize the first project for faster loading
+                priority={index === 0}
+                ribbon={project.ribbon}
+                // Prioritize the first project for faster loading
               />
 
               <div className="w-full max-w-[600px] flex flex-col gap-4 text-start md:text-left">

@@ -8,10 +8,32 @@ interface ImageCarouselProps {
   imagePaths: string[];
   title: string;
   priority?: boolean;
+  ribbon?: boolean;
 }
 
-export default function ImageCarousel({ imagePaths, title, priority = false }: ImageCarouselProps) {
+export default function ImageCarousel({ imagePaths, title, priority = false, ribbon }: ImageCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    if (!imagePaths || imagePaths.length <= 1) {
+    return (
+      <div className="relative w-full aspect-[3/2] rounded-lg border border-gray-400 overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+          {ribbon && (
+          <div className="absolute top-[-8] left-[-8] w-50 h-60 overflow-hidden pointer-events-none z-20">
+            <div className="absolute top-14 -left-12 w-60 bg-brand-orange text-white text-sm font-bold py-1 text-center shadow-md rotate-315 uppercase tracking-wider border-b border-black/40">
+              <span>Frontend In-progress</span>
+            </div>
+          </div>
+        )}
+        <Image
+          src={imagePaths?.[0] || "/placeholder.png"}
+          alt={`Image of ${title}`}
+          fill
+          sizes="(max-width: 768px) 100vw, 600px"
+          priority={priority}
+        />
+      </div>
+    );
+  }
 
   const nextProjectImage = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -25,6 +47,14 @@ export default function ImageCarousel({ imagePaths, title, priority = false }: I
 
   return (
     <div className="relative w-full aspect-[3/2] rounded-lg border border-gray-400 overflow-hidden bg-neutral-100 dark:bg-neutral-900 shadow-sm">
+      {ribbon && (
+        <div className="absolute top-[-8] left-[-8] w-50 h-60 overflow-hidden pointer-events-none z-20">
+          <div className="absolute top-14 -left-12 w-60 bg-brand-orange text-white text-sm font-bold py-1 text-center shadow-md rotate-315 uppercase tracking-wider border-b border-black/40">
+            <span>Frontend In-progress</span>
+          </div>
+        </div>
+      )}
+      
       <Image
         src={imagePaths[currentImageIndex]}
         alt={`Image of ${title} - Slide ${currentImageIndex + 1}`}
