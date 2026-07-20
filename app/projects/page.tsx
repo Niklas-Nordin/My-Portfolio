@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { portfolioData } from "@/data";
 import ImageCarousel from "@/components/ImageCarousel";
+import Link from "next/link";
 
 function Projects() {
 
@@ -27,9 +28,19 @@ function Projects() {
               />
 
               <div className="w-full max-w-[600px] flex flex-col gap-4 text-start md:text-left">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                {project.liveUrl ? (
+                  <h2><Link 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-2xl font-bold dark:text-white text-brand-orange hover:text-orange-700 dark:hover:text-orange-500 transition-colors"
+                  >
+                    {project.title}
+                  </Link></h2>
+                ) : <h2 className="text-2xl font-bold text-brand-orange dark:text-white">
                   {project.title}
-                </h2>
+                </h2>}
+
                 
                 <ul className="dark:text-gray-300 space-y-2 text-sm md:text-base flex flex-col gap-2">
                   {project.description.map((point, index) => (

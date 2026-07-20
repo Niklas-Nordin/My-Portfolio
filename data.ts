@@ -252,7 +252,7 @@ jobs: [
         { name: "bcrypt", icon: "/techStack/bcrypt.jpg" }
       ],
       description: [
-        "Fullstack developer role with total ownership of the entire frontend, UI/UX design, and backend authentication.",
+        "Fullstack developer role for this MVP with total ownership of the entire frontend, UI/UX design, and backend authentication.",
         "Solely designed and developed the entire user interface and responsive layouts, building dynamic dashboards, portfolio tables, and interactive price graphs utilizing Recharts.",
         "Architected and implemented a secure authentication system from scratch, managing registration, login, and secure sessions via JWT (HttpOnly cookies) and bcrypt.",
         "Developed structured backend endpoints to handle authentication requests and served formatted database data directly to the frontend components."
